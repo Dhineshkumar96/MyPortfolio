@@ -1,0 +1,36 @@
+.services-grid {
+  max-width: var(--content-max);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.service {
+  padding: 20px 20px 22px;
+}
+
+.service h3 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.service p {
+  margin-top: 8px;
+  font-size: 13.5px;
+  color: var(--text-muted);
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+@media (max-width: 900px) {
+  .services-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .services-grid { grid-template-columns: 1fr; }
+}

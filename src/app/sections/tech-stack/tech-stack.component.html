@@ -1,0 +1,19 @@
+<section id="stack" class="section">
+  <div class="section-head">
+    <p class="eyebrow">04 · tech stack</p>
+    <h2>What I build with</h2>
+  </div>
+
+  <div class="stack-grid">
+    @for (group of groups; track group.label) {
+      <div class="stack-group card">
+        <h3>{{ group.label }}</h3>
+        <div class="chip-row">
+          @for (item of group.items; track item) {
+            <span class="tag">{{ item }}</span>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</section>

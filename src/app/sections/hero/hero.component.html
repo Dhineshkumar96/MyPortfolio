@@ -1,0 +1,51 @@
+<section id="home" class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">available · tamil nadu, india</p>
+
+    <h1>
+      Building enterprise interfaces that <span>hold up under real usage.</span>
+    </h1>
+
+    <p class="lede">
+      I'm Dhinesh Kumar, an Angular frontend developer who builds scalable enterprise
+      web applications — high-performance dashboards, secure authentication systems
+      and modern SaaS interfaces that admin teams rely on every day.
+    </p>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="#projects">View my work</a>
+      <a class="btn btn-ghost" href="assets/dhinesh-kumar-resume.pdf" download>Download résumé</a>
+    </div>
+
+    <dl class="stats">
+      @for (stat of stats; track stat.label) {
+        <div class="stat">
+          <dt>{{ stat.value }}</dt>
+          <dd>{{ stat.label }}</dd>
+        </div>
+      }
+    </dl>
+  </div>
+
+  <div class="hero-panel card" aria-hidden="true">
+    <div class="panel-head">
+      <span class="tag">component.ts</span>
+      <span class="panel-dot"></span>
+    </div>
+    <pre class="code"><code>&#64;Component({{ '{' }}
+  selector: 'app-admin-shell',
+  standalone: true,
+  changeDetection:
+    ChangeDetectionStrategy.OnPush
+{{ '}' }})
+export class AdminShellComponent {{ '{' }}
+  role = input.required&lt;Role&gt;();
+  guardedBy = 'JwtAuthGuard';
+  status = signal('production');
+{{ '}' }}</code></pre>
+    <div class="panel-footer">
+      <span class="pill pill-live">production</span>
+      <span class="pill">role-based access</span>
+    </div>
+  </div>
+</section>

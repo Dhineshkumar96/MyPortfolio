@@ -1,0 +1,26 @@
+<section id="achievements" class="section">
+  <div class="section-head">
+    <p class="eyebrow">07 · track record</p>
+    <h2>Achievements &amp; why hire me</h2>
+  </div>
+
+  <div class="two-col">
+    <div class="col-card card">
+      <h3>Achievements</h3>
+      <ul class="check-list">
+        @for (item of achievements; track item) {
+          <li>{{ item }}</li>
+        }
+      </ul>
+    </div>
+
+    <div class="col-card card">
+      <h3>Why hire me</h3>
+      <div class="chip-row">
+        @for (item of whyHire; track item) {
+          <span class="tag">{{ item }}</span>
+        }
+      </div>
+    </div>
+  </div>
+</section>

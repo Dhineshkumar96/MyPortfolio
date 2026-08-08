@@ -1,0 +1,22 @@
+<section id="services" class="section">
+  <div class="section-head">
+    <p class="eyebrow">05 · services</p>
+    <h2>How I can help</h2>
+  </div>
+
+  <div class="services-grid">
+    @for (service of services; track service.name) {
+      <div class="service card">
+        <h3>{{ service.name }}</h3>
+        <p>{{ service.description }}</p>
+        @if (service.detail.length) {
+          <div class="chip-row">
+            @for (d of service.detail; track d) {
+              <span class="tag">{{ d }}</span>
+            }
+          </div>
+        }
+      </div>
+    }
+  </div>
+</section>

@@ -1,0 +1,53 @@
+<section id="contact" class="section">
+  <div class="section-head">
+    <p class="eyebrow">09 · contact</p>
+    <h2>Let's build something amazing together</h2>
+    <p class="section-sub">
+      I'm always interested in discussing new opportunities, enterprise applications,
+      Angular development and exciting frontend projects.
+    </p>
+  </div>
+
+  <div class="contact-grid">
+    <ul class="channels">
+      @for (c of channels; track c.label) {
+        <li>
+          <span class="tag">{{ c.label }}</span>
+          @if (c.href) {
+            <a [href]="c.href" target="_blank" rel="noopener">{{ c.value }}</a>
+          } @else {
+            <span class="value">{{ c.value }}</span>
+          }
+        </li>
+      }
+    </ul>
+
+    <form class="ticket card" #ticketForm (submit)="$event.preventDefault(); onSubmit(ticketForm)">
+      <div class="ticket-head">
+        <span class="tag">new-message</span>
+        <span class="tag">status: draft</span>
+      </div>
+
+      <label>
+        Name
+        <input type="text" name="name" required placeholder="Your name" />
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" required placeholder="you&#64;company.com" />
+      </label>
+
+      <label>
+        Message
+        <textarea name="message" rows="4" required placeholder="Tell me about the project..."></textarea>
+      </label>
+
+      <button type="submit" class="btn btn-primary">Send message</button>
+
+      @if (submitted()) {
+        <p class="confirm">Thanks — this demo form doesn't send yet. Connect it to your API or a form service to go live.</p>
+      }
+    </form>
+  </div>
+</section>

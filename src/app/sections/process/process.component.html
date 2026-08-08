@@ -1,0 +1,21 @@
+<section id="process" class="section">
+  <div class="section-head">
+    <p class="eyebrow">06 · process</p>
+    <h2>How a build moves through my pipeline</h2>
+    <p class="section-sub">Every project runs through the same eight stages, in order — closer to a CI/CD pipeline than a checklist.</p>
+  </div>
+
+  <ol class="pipeline card">
+    @for (step of steps; track step; let i = $index; let last = $last) {
+      <li class="stage">
+        <div class="stage-marker">
+          <span class="stage-index">{{ (i + 1).toString().padStart(2, '0') }}</span>
+        </div>
+        <span class="stage-label">{{ step }}</span>
+        @if (!last) {
+          <span class="stage-connector" aria-hidden="true"></span>
+        }
+      </li>
+    }
+  </ol>
+</section>

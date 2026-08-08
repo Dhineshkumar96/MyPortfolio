@@ -1,0 +1,28 @@
+<aside class="shell">
+  <div class="brand">
+    <div class="mark">DK</div>
+    <div class="brand-text">
+      <strong>Dhinesh Kumar</strong>
+      <span>Angular Frontend Dev</span>
+    </div>
+  </div>
+
+  <nav class="nav" aria-label="Section navigation">
+    @for (section of sections; track section.id) {
+      <a
+        [href]="'#' + section.id"
+        class="nav-link"
+        [class.active]="spy.activeId() === section.id"
+        (click)="navigate(section.id, $event)"
+      >
+        <span class="dot"></span>
+        {{ section.label }}
+      </a>
+    }
+  </nav>
+
+  <div class="status">
+    <span class="status-dot"></span>
+    Available for opportunities
+  </div>
+</aside>

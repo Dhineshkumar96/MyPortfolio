@@ -1,0 +1,50 @@
+.role {
+  max-width: var(--content-max);
+  padding: 26px 28px 30px;
+}
+
+.role-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.role-head h3 {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.role-company {
+  margin-top: 6px;
+  font-size: 13.5px;
+  color: var(--text-muted);
+}
+
+.resp-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 22px;
+}
+
+.resp-grid li {
+  font-size: 14px;
+  color: var(--text-muted);
+  padding-left: 18px;
+  position: relative;
+}
+
+.resp-grid li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent-2);
+  font-size: 12px;
+}
+
+@media (max-width: 640px) {
+  .resp-grid { grid-template-columns: 1fr; }
+}

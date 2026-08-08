@@ -1,0 +1,56 @@
+.timeline {
+  max-width: var(--content-max);
+  display: flex;
+  flex-direction: column;
+}
+
+.milestone {
+  display: flex;
+  gap: 20px;
+}
+
+.milestone-rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 12px;
+  flex-shrink: 0;
+}
+
+.milestone-rail::before {
+  content: '';
+  width: 1px;
+  flex: 1;
+  background: var(--border);
+}
+
+.milestone:first-child .milestone-rail::before { visibility: hidden; }
+
+.milestone-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid var(--accent);
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.milestone-body {
+  padding: 18px 22px 22px;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.milestone-body h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.milestone-body p {
+  margin-top: 8px;
+  font-size: 13.5px;
+  color: var(--text-muted);
+  max-width: 560px;
+}

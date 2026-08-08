@@ -1,0 +1,25 @@
+<section id="journey" class="section">
+  <div class="section-head">
+    <p class="eyebrow">08 · journey</p>
+    <h2>Career journey</h2>
+    <p class="section-sub">
+      This path strengthened discipline, resilience and problem-solving — qualities I bring
+      into every project now.
+    </p>
+  </div>
+
+  <ol class="timeline">
+    @for (m of milestones; track m.title) {
+      <li class="milestone">
+        <div class="milestone-rail">
+          <span class="milestone-dot"></span>
+        </div>
+        <div class="milestone-body card">
+          <span class="tag">{{ m.year }}</span>
+          <h3>{{ m.title }}</h3>
+          <p>{{ m.description }}</p>
+        </div>
+      </li>
+    }
+  </ol>
+</section>

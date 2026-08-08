@@ -1,0 +1,73 @@
+.contact-grid {
+  max-width: var(--content-max);
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 28px;
+}
+
+.channels {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.channels li {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.channels a,
+.channels .value {
+  font-size: 14.5px;
+  color: var(--text);
+}
+
+.channels a:hover { color: var(--accent-2); }
+
+.ticket { padding: 22px 24px 26px; }
+
+.ticket-head {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.ticket label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 12.5px;
+  font-family: var(--font-mono);
+  color: var(--text-faint);
+  margin-bottom: 16px;
+}
+
+.ticket input,
+.ticket textarea {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 11px 13px;
+  resize: vertical;
+}
+
+.ticket input:focus,
+.ticket textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.confirm {
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--accent-2);
+}
+
+@media (max-width: 760px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,34 @@
+.stack-grid {
+  max-width: var(--content-max);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.stack-group {
+  padding: 20px 22px 22px;
+}
+
+.stack-group h3 {
+  font-size: 13px;
+  font-family: var(--font-mono);
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.stack-group:last-child {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 760px) {
+  .stack-grid { grid-template-columns: 1fr; }
+  .stack-group:last-child { grid-column: auto; }
+}

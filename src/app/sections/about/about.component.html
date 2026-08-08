@@ -1,0 +1,29 @@
+<section id="about" class="section">
+  <div class="section-head">
+    <p class="eyebrow">01 · about</p>
+    <h2>Who I am</h2>
+    <p class="section-sub">
+      An Angular developer with strong experience designing and developing modern web
+      applications for enterprise clients — the kind that need to be fast, secure and
+      maintainable for years, not just demo well once.
+    </p>
+  </div>
+
+  <div class="about-grid">
+    <div class="skills card">
+      <div class="skills-head">
+        <span class="tag">working-with.json</span>
+      </div>
+      <ul class="skills-list">
+        @for (skill of skills; track skill) {
+          <li>{{ skill }}</li>
+        }
+      </ul>
+    </div>
+
+    <blockquote class="belief">
+      "Good software isn't just about writing code — it's about building products
+      that users enjoy using."
+    </blockquote>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+<section id="projects" class="section">
+  <div class="section-head">
+    <p class="eyebrow">03 · projects</p>
+    <h2>Selected builds</h2>
+    <p class="section-sub">Four enterprise products, shown the way I'd show them in a release log — open a row for the module breakdown.</p>
+  </div>
+
+  <div class="table card">
+    <div class="table-head">
+      <span>Project</span>
+      <span class="col-status">Status</span>
+    </div>
+
+    @for (project of projects; track project.name; let i = $index) {
+      <div class="row" [class.open]="expandedId() === i">
+        <button class="row-head" type="button" (click)="toggle(i)" [attr.aria-expanded]="expandedId() === i">
+          <div class="row-title">
+            <span class="chevron">›</span>
+            <div>
+              <h3>{{ project.name }}</h3>
+              <p>{{ project.description }}</p>
+            </div>
+          </div>
+          <span class="status" [class]="'status-' + project.status.toLowerCase()">
+            <span class="status-dot"></span>{{ project.status }}
+          </span>
+        </button>
+
+        @if (expandedId() === i) {
+          <div class="row-body">
+            <span class="row-body-label">{{ project.itemLabel }}</span>
+            <div class="chip-row">
+              @for (item of project.items; track item) {
+                <span class="tag">{{ item }}</span>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    }
+  </div>
+</section>
